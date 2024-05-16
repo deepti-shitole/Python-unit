@@ -1,0 +1,25 @@
+pipeline{
+  agent{
+   label 'Slave-1'
+  }
+  stages{
+    stage('Build'){
+      steps{
+        echo "Success"
+      }
+    }
+    stage('Test'){
+      steps{
+        bat 'python prime_test.py'
+       publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'C:\\Users\\kpatil2\\OneDrive - Expleo France\\Desktop\\HTD-Slave1-WS', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+      }
+    }
+  }
+  post{
+        success{
+            mail to: "patilkarteeki1111@gmail.com",
+            subject: "Test Email",
+            body: "Test"
+        }
+}
+}
