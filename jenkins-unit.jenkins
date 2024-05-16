@@ -9,7 +9,7 @@ pipeline{
     stage('Test'){
       steps{
         bat 'python prime_test.py'
-       publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'C:\\Users\\kpatil2\\OneDrive - Expleo France\\Desktop\\HTD-Slave1-WS', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+      // publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'C:\\Users\\kpatil2\\OneDrive - Expleo France\\Desktop\\HTD-Slave1-WS', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
       }
     }
   }
