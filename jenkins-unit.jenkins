@@ -1,5 +1,8 @@
 pipeline{
   agent any
+tools {
+        python 'Python' // Use the Python installation named 'Python3' defined in Jenkins Global Tools Configuration
+    }
   stages{
     stage('Build'){
       steps{
