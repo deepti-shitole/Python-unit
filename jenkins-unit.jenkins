@@ -14,10 +14,13 @@ pipeline{
       }
     }
   }
-  post{
-        success{
-           
-            echo "Pipeline Succeed"
+   post {
+        success {
+            script {
+                emailext body: 'Your pipeline succeeded.',
+                         subject: 'Pipeline Success Notification',
+                         to: 'deeptishitole96@gmail.com'
+            }
         }
-}
+    }
 }
