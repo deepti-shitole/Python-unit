@@ -16,11 +16,7 @@ pipeline{
   }
    post {
         success {
-            script {
-                emailext body: 'Your pipeline succeeded.',
-                         subject: 'Pipeline Success Notification',
-                         to: 'deeptishitole96@gmail.com'
-            }
+            echo "Pipeline succeed"
         }
     }
 }
