@@ -16,9 +16,9 @@ pipeline{
   }
   post{
         success{
-            //mail to: "patilkarteeki1111@gmail.com",
-            //subject: "Test Email",
-            //body: "Test"
+            mail to: "patilkarteeki1111@gmail.com",
+            subject: "Test Email",
+            body: "Test"
             echo "Pipeline Success"
         }
 }
